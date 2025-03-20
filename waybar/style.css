@@ -19,7 +19,7 @@
 
 * {
 	font-size: 15px;
-	font-family: "Menlo for Powerline", monospace;
+	font-family: "JetBrains Mono", "Menlo for Powerline", monospace;
 }
 
 window#waybar {
