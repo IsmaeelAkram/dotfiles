@@ -8,5 +8,26 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
+    ~/.config/waybar/:
+      create: true
+      path: waybar/*
+      glob: true
+      relink: true
+    ~/.config/hypr/:
+      create: true
+      path: hypr/*
+      glob: true
+      relink: true
+    ~/.config/rofimoji/:
+      create: true
+      path: rofimoji/*
+      glob: true
+      relink: true
+    ~/.config/rofi/:
+      create: true
+      path: rofi/*
+      glob: true
+      relink: true
+
 
 

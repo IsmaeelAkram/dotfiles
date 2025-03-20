@@ -1,0 +1,115 @@
+
+/*base background color*/
+@define-color bg_main rgba(25, 25, 25, 0.65);
+@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+
+
+/*base background color of selections */
+@define-color bg_hover rgba(200, 200, 200, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(100, 100, 100, 0.5);
+
+/*base border color*/
+@define-color border_main rgba(255, 255, 255, 0.2);
+
+/*text color for entries, views and content in general */
+@define-color content_main white;
+/*text color for entries that are unselected */
+@define-color content_inactive rgba(255, 255, 255, 0.25);
+
+* {
+	font-size: 15px;
+	font-family: "Menlo for Powerline", monospace;
+}
+
+window#waybar {
+	background: #292b2e;
+	color: #fdf6e3;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #292b2e;
+	background: #1a1a1a;
+}
+
+#custom-prayer,
+#disk,
+#backlight,
+#battery,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#temperature,
+#tray,
+#workspaces {
+	background: #1a1a1a;
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: @content_inactive;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+	color: @content_main;
+    border-bottom: 3px solid white;
+}
+#workspaces button.focused {
+	color: #268bd2;
+}
+#workspaces button.urgent {
+    background:  rgba(255, 200, 0, 0.35);
+    border-bottom: 3px dashed @warning_color;
+    color: @warning_color;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+	background: @bg_hover;
+	border: #1a1a1a;
+	padding: 0 3px;
+}
+
+#disk {
+    color: #FFF;
+}
+#backlight {
+	color: #FFD700;
+}
+#battery {
+	color: #859900;
+}
+#cpu {
+	color: #6c71c4;
+}
+#memory {
+	color: #2aa198;
+}
+#pulseaudio {
+	color: #268bd2;
+}
+#temperature {
+	color: #18c340;
+}
+#temperature.critical {
+	color: @warning_color;
+}
+
+#custom-prayer,
+#disk,
+#backlight,
+#battery,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#temperature {
+	padding: 0 10px;
+}
+
