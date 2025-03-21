@@ -12,6 +12,7 @@ Plug 'xero/miasma.nvim'
 
 Plug 'ycm-core/YouCompleteMe'
 Plug 'github/copilot.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 call wilder#setup({'modes': [':', '/', '?']})
@@ -36,6 +37,8 @@ map <leader>w :w<CR>
 map <leader>q :wq<CR>
 map <leader>c :close<CR>
 map <leader>b :NERDTreeToggle<CR>
+map <leader>c :Copilot<CR>
+map <leader>g :Git<CR>
 map <leader>p :call ToPdf()<CR>
 
 " Custom commands
