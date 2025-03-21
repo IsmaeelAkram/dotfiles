@@ -1,0 +1,20 @@
+[DetailsMode]
+UseSystemFont=false
+ViewFont=JetBrains Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[General]
+Version=202
+ViewPropsTimestamp=2025,3,20,1,1,24.261
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+/* MenuBar=Disabled */
+
+[PreviewSettings]
+Plugins=comicbookthumbnail,appimagethumbnail,windowsexethumbnail,exrthumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,cursorthumbnail,directorythumbnail,audiothumbnail,imagethumbnail,djvuthumbnail,jpegthumbnail,ebookthumbnail,kraorathumbnail,avif,gdk-pixbuf-thumbnailer,jxl
+
+[ViewPropertiesDialog]
+1600x1000 screen: Window-Maximized=true

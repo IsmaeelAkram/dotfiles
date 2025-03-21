@@ -6,6 +6,7 @@
         path: ssh/config
         create: true
     ~/.vimrc: vimrc
+    ~/.config/dolphinrc: dolphinrc
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
     ~/.config/waybar/:
