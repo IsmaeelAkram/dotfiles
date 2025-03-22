@@ -1,169 +1,105 @@
 {
-	"layer": "top",
-	"position": "top",
-	"mod": "dock",
-	"exclusive": true,
-    "gtk-layer-shell": true,
-    "margin-bottom": -1,
-    "passthrough": false,
-    "height": 30,
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
 
-	"modules-left": [
-		"hyprland/workspaces",
-		"custom/right-arrow-dark"
-	],
-	"modules-right": [
-        "custom/left-arrow-dark",
-        "custom/prayer",
-        "custom/left-arrow-light",
-		"custom/left-arrow-dark",
+    "margin-top": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/prayer"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "cpu_text",
+        "cpu",
+        "memory",
         "disk",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-        "temperature",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"battery",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-        "backlight",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-        "tray"
-	],
+        "battery",
+        "network",
+        "pulseaudio"
+    ],
 
-    "custom/prayer": {
-        "format": "🕋 {}",
-        "exec": "/home/ismaeel/prayers/exec",
-        "interval": 5
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
     },
 
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-
-    "disk": {
-        "format": "💾 {percentage_used}%",
-        "tooltip": true,
+    "disk": { 
+        "format": "disk {percentage_used}%", 
+        "tooltip": true, 
         "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
         "unit": "GB"
     },
-    "backlight": {
-        "device": "acpi_video0",
-        "format": "{icon} {percent}%",
-		"format-icons": [
-            "󰃞",
-			"󰃝",
-            "󰃟",
-            "󰃠"
-		],
+
+   "custom/prayer": { 
+      "format": "🕋 {}", 
+      "exec": "/home/ismaeel/prayers/exec", 
+      "interval": 5
+    }, 
+
+    "tray": {
+        "spacing": 10,
         "tooltip": false
     },
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-        "format-charging": "{icon} {capacity}% ⚡",
-        "interval": 1
-	},
-	"clock": {
-        "format": "{:%b %d %I:%M%p}",
-		"tooltip": true,
-		"tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "interval": 30 
-	},
-	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
-	},
-	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-        "format-muted": " ",
-        "format-icons": {
-            "default": [
-                " ",
-                " ",
-                " "
-            ]
-        },
-		"format-bluetooth": "{volume}%",
-		"scroll-step": 5,
-        "max-volume": 100,
-		"on-click": "easyeffects",
-	},
-    "temperature": {
-        "critical-threshold": 80,
-		"interval": 30,
-        "format-critical": "{icon} {temperatureC}°C",
-        "format": "{icon} {temperatureC}°C",
-		"format-icons": [
-			"", "", "", "", "", "", "", "", "", "", "",
-			"",
-			"",
-			"",
-			""
-		],
-		"tooltip": true,
-    },
-	"memory": {
-		"interval": 5,
-		"format": "RAM {percentage}%",
-        "tooltip": true,
-        "tooltip-format": "RAM - {used:0.1f}GiB used"
-	},
-	"tray": {
-		"icon-size": 20,
-        "spacing": 10
-	}
-}
 
-// vim:ft=jsonc ts=4 sw=4 sts=4 et
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "format": "mem {percentage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 80
+        }
+    },
+
+    "battery": {
+        "format": "bat {capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-ethernet": "enth {bandwidthDownBits}",
+        "format-disconnected" : "no network",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    }
+}

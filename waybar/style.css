@@ -1,115 +1,115 @@
-
-/*base background color*/
-@define-color bg_main rgba(25, 25, 25, 0.65);
-@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
-
-
-/*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.3);
-/*base background color of active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
-
-/*base border color*/
-@define-color border_main rgba(255, 255, 255, 0.2);
-
-/*text color for entries, views and content in general */
-@define-color content_main white;
-/*text color for entries that are unselected */
-@define-color content_inactive rgba(255, 255, 255, 0.25);
+/* https://github.com/MubinMuhammad/MinimalSwayFX/tree/main/waybar */
 
 * {
-	font-size: 15px;
-	font-family: "JetBrains Mono", "Menlo for Powerline", monospace;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    /* font-family: "iosevka nerd font"; */
+    font-family: "JetBrains Mono";
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+    background: #1d2021;
+    border: 2px solid #3c3836;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
+tooltip {
+    background-color: #1d2021;
+    border: 2px solid #7c6f64;
 }
 
-#custom-prayer,
 #disk,
-#backlight,
-#battery,
 #clock,
+#tray,
 #cpu,
 #memory,
-#pulseaudio,
-#temperature,
-#tray,
-#workspaces {
-	background: #1a1a1a;
+#battery,
+#network,
+#pulseaudio {
+    margin: 6px 6px 6px 0px;
+    padding: 2px 8px;
 }
+
+#workspaces {
+    background-color: #303536;
+    margin: 6px 0px 6px 6px;
+    border: 2px solid #434a4c;
+}
+
+#custom-prayer {
+    background-color: #303536;
+    margin: 6px 0px 6px 6px;
+    border: 2px solid #434a4c;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 8px;
+    color: #c7ab7a;
+}
+
 
 #workspaces button {
-	padding: 0 2px;
-	color: @content_inactive;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 4px;
+    color: #c7ab7a;
 }
-#workspaces button.active {
-	color: @content_main;
-    border-bottom: 3px solid white;
-}
+
 #workspaces button.focused {
-	color: #268bd2;
+    color: #ddc7a1;
 }
+
 #workspaces button.urgent {
-    background:  rgba(255, 200, 0, 0.35);
-    border-bottom: 3px dashed @warning_color;
-    color: @warning_color;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-	background: @bg_hover;
-	border: #1a1a1a;
-	padding: 0 3px;
+    background-color: #e78a4e;
 }
 
-#disk {
-    color: #FFF;
+#clock {
+    background-color: #303536;
+    border: 2px solid #434a4c;
+    color: #d4be98;
 }
-#backlight {
-	color: #FFD700;
+
+#tray {
+    background-color: #d4be98;
+    border: 2px solid #c7ab7a;
 }
+
 #battery {
-	color: #859900;
-}
-#cpu {
-	color: #6c71c4;
-}
-#memory {
-	color: #2aa198;
-}
-#pulseaudio {
-	color: #268bd2;
-}
-#temperature {
-	color: #18c340;
-}
-#temperature.critical {
-	color: @warning_color;
+    background-color: #a9b665;
+    border: 2px solid #c7ab7a;
+    color: #6c782e;
 }
 
-#custom-prayer,
-#disk,
-#backlight,
-#battery,
-#clock,
 #cpu,
 #memory,
-#pulseaudio,
-#temperature {
-	padding: 0 10px;
+#network,
+#pulseaudio, 
+#disk {
+    background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;
+    color: #1d2021;
 }
 
+#cpu.critical,
+#memory.critical {
+    background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;
+    color: #c14a4a;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;
+    color: #c14a4a;
+}
+
+
+#battery.charging {
+    background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;
+    color: green;
+}
