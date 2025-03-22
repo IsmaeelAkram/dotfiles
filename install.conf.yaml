@@ -34,6 +34,10 @@
       path: alacritty/*
       glob: true
       relink: true
-
+    ~/.config/coc/:
+      create: true
+      path: coc/*
+      glob: true
+      relink: true
 
 

@@ -13,6 +13,7 @@ Plug 'xero/miasma.nvim'
 "Plug 'ycm-core/YouCompleteMe'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'brooth/far.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
