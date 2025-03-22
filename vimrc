@@ -71,6 +71,11 @@ set cursorline
 set clipboard=unnamedplus
 " set wildmode=longest,list,full
 
+" If on Windows, set termguicolors
+if has('win32') || has('win64')
+  set termguicolors
+endif
+
 autocmd vimenter * ++nested colorscheme gruvbox
 " colorscheme peachpuff
 augroup colorscheme_change | au! 
