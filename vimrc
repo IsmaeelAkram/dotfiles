@@ -10,9 +10,10 @@ Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'xero/miasma.nvim'
 
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 call wilder#setup({'modes': [':', '/', '?']})
@@ -40,6 +41,12 @@ map <leader>b :NERDTreeToggle<CR>
 map <leader>c :Copilot<CR>
 map <leader>g :Git<CR>
 map <leader>p :call ToPdf()<CR>
+
+" Run prettier on save
+augroup PrettierAutoFormat
+  autocmd!
+  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js Prettier
+augroup END
 
 " Custom commands
 fun! ToPdf()
