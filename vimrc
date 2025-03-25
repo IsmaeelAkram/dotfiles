@@ -68,12 +68,19 @@ set tabstop=4
 set shiftwidth=2
 set mouse=a
 set cursorline
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 " set wildmode=longest,list,full
 
 " If on Windows, set termguicolors
 if has('win32') || has('win64')
   set termguicolors
+endif
+
+" If on Mac, set clipboard=unnamed. If on Linux, set clipboard=unnamedplus
+if has('mac') || has('macunix') || has('win32') || has('win64')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
 endif
 
 autocmd vimenter * ++nested colorscheme gruvbox
