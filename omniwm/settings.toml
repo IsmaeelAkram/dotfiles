@@ -79,7 +79,7 @@ hotkeysEnabled = true
 hyperKeyModifiers = "Control+Option+Command"
 ipcEnabled = true
 preventSleepEnabled = false
-systemHyperTrigger = "Caps Lock"
+systemHyperTrigger = "F18"
 updateChecksEnabled = true
 workspaceAutoBackAndForth = false
 
