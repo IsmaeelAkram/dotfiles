@@ -2,7 +2,8 @@ modelRoles:
   default: anthropic/claude-opus-5-5:xhigh
 symbolPreset: nerd
 composer:
-  shape: borderless
+  shape: band
+  tokenRate: false
 theme:
   dark: dark-catppuccin
 update:
@@ -10,8 +11,11 @@ update:
 setupVersion: 3
 statusLine:
   compactThinkingLevel: false
-  preset: custom
+  preset: default
   showHookStatus: true
+  separator: powerline-thin
+  transparent: false
+  sessionAccent: true
 defaultThinkingLevel: xhigh
 memory:
   backend: hindsight
