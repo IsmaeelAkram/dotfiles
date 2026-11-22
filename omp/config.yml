@@ -1,0 +1,38 @@
+modelRoles:
+  default: anthropic/claude-opus-5-5:xhigh
+symbolPreset: nerd
+composer:
+  shape: borderless
+theme:
+  dark: dark-catppuccin
+update:
+  auto: true
+setupVersion: 3
+statusLine:
+  compactThinkingLevel: false
+  preset: custom
+  showHookStatus: true
+defaultThinkingLevel: xhigh
+memory:
+  backend: hindsight
+tui:
+  vimMode: false
+  motion: full
+display:
+  showTurnTime: true
+  hideToolActivity: false
+title:
+  icons: nf+emoji
+disabledProviders:
+  - ollama
+tools:
+  approvalMode: yolo
+github:
+  enabled: true
+astGrep:
+  enabled: true
+generate_image:
+  enabled: true
+hideThinkingBlock: false
+browser:
+  headless: false

@@ -1,0 +1,8 @@
+{
+  "lastChangelogVersion": "1.6.0",
+  "packages": [
+    "https://github.com/earendil-works/pi-claude-code"
+  ],
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true
+}

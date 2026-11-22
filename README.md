@@ -8,6 +8,8 @@ Configs for my MacBook (macOS) and my PC (Omarchy). The old Arch Linux setup liv
 | `nvim/` | `~/.config/nvim` | both |
 | `tmux/` | `~/.config/tmux` | both |
 | `ghostty/` | `~/.config/ghostty` | both |
+| `omp/config.yml` | `~/.omp/agent/config.yml` | both |
+| `pi/settings.json` | `~/.pi/agent/settings.json` | both |
 | `omniwm/` | `~/.config/omniwm` | macOS |
 | `skhd/` | `~/.config/skhd` | macOS |
 

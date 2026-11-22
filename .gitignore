@@ -4,3 +4,4 @@
 # State the apps write into their (symlinked) config dirs
 ghostty/auto/
 omniwm/clipboard-history.json
+omp/config.yml.lock

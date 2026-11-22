@@ -46,6 +46,10 @@ link "$DOTFILES/nvim" "$HOME/.config/nvim"
 link "$DOTFILES/tmux" "$HOME/.config/tmux"
 link "$DOTFILES/ghostty" "$HOME/.config/ghostty"
 
+# omp and pi: settings only; auth, sessions and caches stay local.
+link "$DOTFILES/omp/config.yml" "$HOME/.omp/agent/config.yml"
+link "$DOTFILES/pi/settings.json" "$HOME/.pi/agent/settings.json"
+
 if [[ $(uname -s) == Darwin ]]; then
   link "$DOTFILES/omniwm" "$HOME/.config/omniwm"
   link "$DOTFILES/skhd" "$HOME/.config/skhd"
