@@ -26,3 +26,12 @@ git clone --recursive https://github.com/IsmaeelAkram/dotfiles ~/dotfiles
 - links the active Omarchy theme into Neovim so it follows theme switches (Omarchy)
 
 Omarchy's default shell is bash; switch to zsh with `chsh -s "$(command -v zsh)"`.
+
+## Hyper key (macOS)
+
+Caps Lock is Hyper (Ctrl+Option+Cmd) for OmniWM and skhd bindings, and never toggles Caps Lock. OmniWM's built-in "Caps Lock" trigger toggles Caps Lock on a quick tap, with no setting to stop it, so instead:
+
+- `omniwm/launchagents/local.omniwm.capslock-f18.plist` remaps Caps Lock to F18 with `hidutil` at login
+- `omniwm/settings.toml` uses `systemHyperTrigger = "F18"`, so holding the key is Hyper and tapping it does nothing
+
+If the remap goes missing (e.g. after switching OmniWM's trigger away from Caps Lock and back), reapply it with `launchctl kickstart gui/$UID/local.omniwm.capslock-f18`.
