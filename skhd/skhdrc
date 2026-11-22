@@ -1,0 +1,4 @@
+# Hyper (Caps Lock) = ctrl + alt + cmd. Hyper+Return was OmniWM toggleFullscreen; unassigned there.
+ctrl + alt + cmd - return         : open -a Ghostty
+ctrl + alt + cmd + shift - return : open -a "Google Chrome"
+ctrl + alt + cmd + shift - f      : open -a Finder

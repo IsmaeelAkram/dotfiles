@@ -1,0 +1,12 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+/.DS_Store
+
+# Omarchy symlink to the active theme (created at install, see README)
+lua/plugins/theme.lua

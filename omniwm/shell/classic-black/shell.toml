@@ -1,0 +1,24 @@
+# Classic Black: the classic bar (see ../classic/shell.toml) in black, with white/grey text and highlights.
+# The black comes from themes/black.toml via barFill, not solidBlackBackground: OmniWM squares off
+# the corners of a solid black bar, and a filled bar keeps classic's rounded ones.
+# Switch with: omniwmctl shell profile classic-black
+theme = "black"
+leading = []
+center = ["workspaces"]
+trailing = []
+
+[workspaceBar]
+position = "bottom"
+fullWidth = false
+reserveLayoutSpace = false
+height = 24
+barFill = "background"
+backgroundOpacity = 1
+solidBlackBackground = false
+transparentBackground = false
+showItemBackgrounds = true
+showAccentHighlights = true
+showLabels = true
+systemStatsButton = false
+xOffset = 0
+yOffset = 0

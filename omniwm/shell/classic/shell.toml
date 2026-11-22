@@ -1,0 +1,24 @@
+# Classic: the pre-0.8 workspace bar, as a fallback while the new full-width bar matures.
+# A floating bar at the bottom with only workspaces and their windows; the macOS menu bar stays native.
+# Switch with: omniwmctl shell profile classic   (back: omniwmctl shell profile matrix)
+# Every [workspaceBar] key below overrides default/shell.toml, which each profile inherits;
+# the values match the old settings.toml.
+theme = "native"
+leading = []
+center = ["workspaces"]
+trailing = []
+
+[workspaceBar]
+position = "bottom"
+fullWidth = false
+reserveLayoutSpace = false
+height = 24
+backgroundOpacity = 0.05
+transparentBackground = false
+solidBlackBackground = false
+showItemBackgrounds = true
+showAccentHighlights = true
+showLabels = true
+systemStatsButton = false
+xOffset = 0
+yOffset = 0

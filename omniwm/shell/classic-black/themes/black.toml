@@ -1,0 +1,19 @@
+# Black: black bar, white/grey text, and white instead of the system blue for highlights.
+# Unlisted roles keep OmniWM's native colours. Light repeats dark so the bar stays black in both modes.
+[light]
+background = "#000000"
+foreground = "#FFFFFF"
+secondaryForeground = "#A0A0A0"
+mutedForeground = "#707070"
+accent = "#FFFFFF"
+accentForeground = "#000000"
+focus = "#FFFFFF"
+
+[dark]
+background = "#000000"
+foreground = "#FFFFFF"
+secondaryForeground = "#A0A0A0"
+mutedForeground = "#707070"
+accent = "#FFFFFF"
+accentForeground = "#000000"
+focus = "#FFFFFF"

@@ -1,0 +1,6 @@
+.DS_Store
+*.bak*
+
+# State the apps write into their (symlinked) config dirs
+ghostty/auto/
+omniwm/clipboard-history.json

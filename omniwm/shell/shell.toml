@@ -1,0 +1,35 @@
+profile = "classic-black"
+
+[profiles]
+
+[profiles.classic]
+
+[profiles.classic.workspaceBar]
+backgroundOpacity = 0.0
+solidBlackBackground = false
+transparentBackground = false
+
+[profiles.matrix]
+center = []
+leading = ["apple-menu", "workspaces", "active-window", "app-menu", "calendar"]
+scheme = "tonalSpot"
+theme = "wallpaper"
+trailing = ["omniwm", "system-stats", "notifications", "wifi", "battery-details", "volume", "clock", "control-center"]
+
+[profiles.matrix.widgets]
+
+[profiles.matrix.widgets.omniwm]
+iconColor = "#e9e9e9ff"
+
+[profiles.matrix.workspaceBar]
+backgroundOpacity = 1.0
+fullWidth = true
+height = 38.0
+position = "overlappingMenuBar"
+reserveLayoutSpace = true
+showItemBackgrounds = false
+showLabels = true
+solidBlackBackground = false
+systemStatsButton = true
+transparentBackground = false
+windowLevel = "popup"

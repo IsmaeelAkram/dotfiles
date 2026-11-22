@@ -1,0 +1,20 @@
+background-opacity = 1.00
+#theme = nordic-default
+theme = Catppuccin Mocha
+#font-size = 13
+font-size=15
+
+font-family = JetBrains Mono
+adjust-cell-height = 4
+
+macos-titlebar-style = hidden
+
+window-padding-x = 5
+window-padding-y = 5
+
+shell-integration-features = ssh-env,ssh-terminfo
+# Option sends Alt/Meta so tmux M- bindings (Omarchy tmux.conf) work
+macos-option-as-alt = true
+# Ghostty defaults turn these into esc:b/esc:f (word jump); let tmux see real M-Left/M-Right
+keybind = alt+arrow_left=unbind
+keybind = alt+arrow_right=unbind
